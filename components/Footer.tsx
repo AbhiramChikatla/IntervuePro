@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const Footer: React.FC = () => {
@@ -62,33 +61,33 @@ const Footer: React.FC = () => {
             <h3 className="font-semibold text-lg mb-4">Product</h3>
             <ul className="space-y-3">
               <li>
-                <a
+                <Link
                   href="/#features"
                   className="text-gray-600 hover:text-emerald-600"
                 >
                   Features
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#pricing"
                   className="text-gray-600 hover:text-emerald-600"
                 >
                   Pricing
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#testimonials"
                   className="text-gray-600 hover:text-emerald-600"
                 >
                   Testimonials
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/enterprise" className="text-gray-600 hover:text-emerald-600">
+                <Link href="/enterprise" className="text-gray-600 hover:text-emerald-600">
                   Enterprise
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -97,14 +96,14 @@ const Footer: React.FC = () => {
             <h3 className="font-semibold text-lg mb-4">Support</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/helpcenter" className="text-gray-600 hover:text-emerald-600">
+                <Link href="/helpcenter" className="text-gray-600 hover:text-emerald-600">
                   Help Center
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/documentation" className="text-gray-600 hover:text-emerald-600">
+                <Link href="/documentation" className="text-gray-600 hover:text-emerald-600">
                   Documentation
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="mailto:suprabhat.work@gmail.com" className="text-gray-600 hover:text-emerald-600">
@@ -112,9 +111,9 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-emerald-600">
+                <Link href="/status" className="text-gray-600 hover:text-emerald-600">
                   Status
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -123,24 +122,24 @@ const Footer: React.FC = () => {
             <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/documentation" className="text-gray-600 hover:text-emerald-600">
+                <Link href="/about" className="text-gray-600 hover:text-emerald-600">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/founders" className="text-gray-600 hover:text-emerald-600">
+                <Link href="/founders" className="text-gray-600 hover:text-emerald-600">
                   Meet the Founders
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-emerald-600">
+                <Link href="/blog" className="text-gray-600 hover:text-emerald-600">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-emerald-600">
+                <Link href="/press" className="text-gray-600 hover:text-emerald-600">
                   Press
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -153,18 +152,18 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="flex gap-6">
-            <a
+            <Link
               href="/privacy"
               className="text-gray-500 text-sm hover:text-emerald-600"
             >
               Privacy Policy
-            </a>
-            <a
+            </Link>
+            <Link
               href="/terms"
               className="text-gray-500 text-sm hover:text-emerald-600"
             >
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
