@@ -53,3 +53,43 @@ export interface QuestionEvaluation {
     [key: string]: any;
   }
   
+
+  export interface ExtractAnswerResponse extends LLMResponse {
+    exact_answer?: string;
+  }
+  
+  export interface InterviewSummaryResponse extends LLMResponse {
+    overall_analysis: string;
+    notable_strengths: string[];
+    areas_for_improvement: string[];
+    overall_rating: number;
+  }
+  
+  export interface ScorecardResponse extends LLMResponse {
+    technical_skills: { score: number; commentary: string };
+    problem_solving: { score: number; commentary: string };
+    communication: { score: number; commentary: string };
+    confidence: { score: number; commentary: string };
+  }
+  
+  export interface QuestionFeedbackResponse extends LLMResponse {
+    question_id: number;
+    question: string;
+    candidate_answer: string;
+    actual_answer: string;
+    expected_ideal_points: string[];
+    evaluation: {
+      score: number;
+      coverage: string;
+      missed_points: string[];
+      depth: string;
+    };
+    recommendation: string;
+  }
+  
+  export interface FinalRecommendationsResponse extends LLMResponse {
+    practice_focus_areas: string[];
+    overall_impression: string;
+    final_tip: string;
+  }
+  
