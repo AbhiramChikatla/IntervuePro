@@ -27,3 +27,29 @@ export interface QuestionEvaluation {
     communication: ScoreItem;
     confidence: ScoreItem;
   }
+
+
+  export interface InterviewSummary {
+    overall_analysis: string;
+    notable_strengths: string[];
+    areas_for_improvement: string[];
+    overall_rating: number;
+  }
+  
+  export interface FinalRecommendations {
+    practice_focus_areas: string[];
+    overall_impression: string;
+    final_tip: string;
+  }
+  
+  export interface FeedbackData {
+    success: boolean;
+    job: any;
+    createdAt: any;
+    feedback: InterviewFeedbackResult;
+  }
+  
+  export interface LLMResponse {
+    [key: string]: any;
+  }
+  
