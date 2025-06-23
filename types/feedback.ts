@@ -93,3 +93,28 @@ export interface QuestionEvaluation {
     final_tip: string;
   }
   
+
+  export interface Job {
+    id: number;
+    title: string;
+    company: string;
+    location: string;
+    type: string;
+    level: string;
+    description: string;
+    requirements: string[];
+    responsibilities: string[];
+    salary: string;
+    posted: string;
+    logo: string;
+    industry: string;
+  }
+  
+  export interface InterviewFeedbackResult {
+    interview_summary: {
+      overall_analysis: string;
+      notable_strengths: string[];
+      areas_for_improvement: string[];
+      overall_rating: number; // 0.0 to 10.0
+    };
+  
