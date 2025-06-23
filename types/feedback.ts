@@ -117,4 +117,44 @@ export interface QuestionEvaluation {
       areas_for_improvement: string[];
       overall_rating: number; // 0.0 to 10.0
     };
-  
+    scorecard: {
+        technical_skills: {
+          score: number; // 0 to 10
+          commentary: string;
+        };
+        problem_solving: {
+          score: number; // 0 to 10
+          commentary: string;
+        };
+        communication: {
+          score: number; // 0 to 10
+          commentary: string;
+        };
+        confidence: {
+          score: number; // 0 to 10
+          commentary: string;
+        };
+      };
+    
+      per_question_feedback: Array<{
+        question_id: number;
+        question: string;
+        candidate_answer: string;
+        actual_answer: string;
+        expected_ideal_points: string[];
+        evaluation: {
+          score: number; // 0 to 10
+          coverage: string;
+          missed_points: string[];
+          depth: string;
+        };
+        recommendation: string;
+      }>;
+    
+      final_recommendations: {
+        practice_focus_areas: string[];
+        overall_impression: string;
+        final_tip: string;
+      };
+    }
+    
