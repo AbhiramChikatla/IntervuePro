@@ -57,3 +57,47 @@ export interface AgentProps {
   type: "generate" | "interview";
   questions?: string[];
 }
+
+
+
+export interface RouteParams {
+  params: Promise<Record<string, string>>;
+  searchParams: Promise<Record<string, string>>;
+}
+
+export interface GetFeedbackByInterviewIdParams {
+  interviewId: string;
+  userId: string;
+}
+
+export interface GetLatestInterviewsParams {
+  userId: string;
+  limit?: number;
+}
+
+export interface SignInParams {
+  email: string;
+  idToken: string;
+}
+
+export interface SignUpParams {
+  uid: string;
+  name: string;
+  email: string;
+  password: string;
+}
+
+type FormType = "sign-in" | "sign-up";
+
+export interface InterviewFormProps {
+  interviewId: string;
+  role: string;
+  level: string;
+  type: string;
+  techstack: string[];
+  amount: number;
+}
+
+export interface TechIconProps {
+  techStack: string[];
+}
