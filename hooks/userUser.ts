@@ -1,0 +1,9 @@
+import { UserProfile } from "@/types";
+import { create } from "zustand";
+
+interface userState {
+  user: UserProfile | null;
+  setUser: (userData: UserProfile | null) => void;
+  isAuthenticated: boolean;
+  setIsAuthenticated: () => void;
+}
