@@ -24,33 +24,7 @@ const mockFeedbackData: FeedbackData = {
             ],
             overall_rating: 7.2,
         },
-        scorecard: {
-            technical_skills: {
-                score: 7,
-                commentary:
-                    "Good grasp of backend principles, but lacked depth in scaling strategies and system bottlenecks.",
-            },
-            problem_solving: {
-                score: 8,
-                commentary:
-                    "Demonstrated clear logical steps and thought process in algorithmic questions.",
-            },
-            communication: {
-                score: 6,
-                commentary:
-                    "Used structured formats (like STAR/PEEL), but delivery lacked assertiveness at times.",
-            },
-            confidence: {
-                score: 5,
-                commentary:
-                    "Hesitant during certain answers, especially when unsure. Needs more mock practice to build natural confidence.",
-            },
-            jd_alignment: {
-                score: 7,
-                commentary:
-                    "Answered in line with the job expectations; however, depth in some key tech stacks was missing.",
-            },
-        },
+        
         per_question_feedback: [
             {
                 question_id: 1,
