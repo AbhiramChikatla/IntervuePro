@@ -24,7 +24,7 @@ import { useUserStore } from "./userUser";
 //             ],
 //             overall_rating: 7.2,
 //         },
-        
+
 //         per_question_feedback: [
 //             {
 //                 question_id: 1,
@@ -75,64 +75,64 @@ import { useUserStore } from "./userUser";
 //                     "Study large-scale system design patterns. Focus on scalability trade-offs (e.g., eventual consistency vs real-time sync)",
 //             },
 //         ],
-        
+
 //     },
 // };
 
 
 export const useFeedback = (id: string | undefined) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [feedbackData, setFeedbackData] = useState<FeedbackData | null>(null);
-  const router = useRouter();
-  const { user } = useUserStore();
+    const [isLoading, setIsLoading] = useState(true);
+    const [feedbackData, setFeedbackData] = useState<FeedbackData | null>(null);
+    const router = useRouter();
+    const { user } = useUserStore();
 
-  useEffect(() => {
-    async function getFeedback() {
-      setIsLoading(true);
-      try {
-        const result = await getInterviewById(
-          id || "",
-          auth.currentUser?.uid || user?.uid || ""
-        );
-        if (!result.success) {
-          setFeedbackData(null);
-          router.push("/profile");
-          toast.success("You can see all your feedbacks on your profile");
-          return;
+    useEffect(() => {
+        async function getFeedback() {
+            setIsLoading(true);
+            try {
+                const result = await getInterviewById(
+                    id || "",
+                    auth.currentUser?.uid || user?.uid || ""
+                );
+                if (!result.success) {
+                    setFeedbackData(null);
+                    router.push("/profile");
+                    toast.success("You can see all your feedbacks on your profile");
+                    return;
+                }
+
+                setFeedbackData({
+                    success: true,
+                    feedback: result.data?.data.feedback,
+                    job: result.data?.data.job,
+                    createdAt: result.data?.data.createdAt,
+                });
+                setIsLoading(false);
+            } catch (error) {
+                console.error("Error fetching feedback:", error);
+                setFeedbackData(null);
+            } finally {
+                setIsLoading(false);
+            }
         }
 
-        setFeedbackData({
-          success: true,
-          feedback: result.data?.data.feedback,
-          job: result.data?.data.job,
-          createdAt: result.data?.data.createdAt,
-        });
-        setIsLoading(false);
-      } catch (error) {
-        console.error("Error fetching feedback:", error);
-        setFeedbackData(null);
-      } finally {
-        setIsLoading(false);
-      }
-    }
+        getFeedback();
+    }, [id, user]);
 
-    getFeedback();
-  }, [id, user]);
+    const getScoreValue = (score: number): number => {
+        return (score / 10) * 100;
+    };
 
-  const getScoreValue = (score: number): number => {
-    return (score / 10) * 100;
-  };
+    const scoreColor = (score: number): string => {
+        if (score >= 8) return "bg-emerald-400";
+        if (score >= 6) return "bg-yellow-500";
+        return "bg-red-500";
+    };
 
-  const scoreColor = (score: number): string => {
-    if (score >= 8) return "bg-emerald-400";
-    if (score >= 6) return "bg-yellow-500";
-    return "bg-red-500";
-  };
-
-  return {
-    isLoading,
-    feedbackData,
-    getScoreValue,
-    scoreColor,
-  };
+    return {
+        isLoading,
+        feedbackData,
+        getScoreValue,
+        scoreColor,
+    };
 };
