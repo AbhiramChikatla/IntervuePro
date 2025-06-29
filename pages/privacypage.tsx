@@ -1,35 +1,7 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
-// const PrivacyTermsPages = () => {
-//   const [activePage, setActivePage] = useState('privacy');
-
-//   useEffect(() => {
-//     // Only run on client
-//     if (typeof window === "undefined") return;
-
-//     // Check URL hash to determine which page to show
-//     const hash = window.location.hash;
-//     if (hash === '#terms') {
-//       setActivePage('terms');
-//     } else if (hash === '#privacy') {
-//       setActivePage('privacy');
-//     }
-
-//     // Listen for hash changes
-//     const handleHashChange = () => {
-//       const newHash = window.location.hash;
-//       if (newHash === '#terms') {
-//         setActivePage('terms');
-//       } else if (newHash === '#privacy') {
-//         setActivePage('privacy');
-//       }
-//     };
-
-//     window.addEventListener('hashchange', handleHashChange);
-//     return () => window.removeEventListener('hashchange', handleHashChange);
-//   }, []);
 const PrivacyPolicy = () => (
   <div className="min-h-screen bg-gray-50 py-8">
     <div className="max-w-6xl mx-auto px-4">
@@ -159,58 +131,5 @@ const PrivacyPolicy = () => (
 
 
 
-  // const PrivacyPolicy = () => (
-  //   <Card className="bg-white shadow-md border border-gray-200">
-  //     <CardContent className="p-8">
-  //       <div className="max-w-4xl mx-auto">
-  //         <h1 className="text-3xl font-bold mb-6 text-gray-900">Privacy Policy</h1>
-  //         <p className="text-sm text-gray-600 mb-8">Last updated: {new Date().toLocaleDateString()}</p>
-          
-  //         <div className="space-y-8">
-
-  //         </div>
-  //       </div>
-  //     </CardContent>
-  //   </Card>
-  // );
-
-
-//   return (
-//     <div className="min-h-screen bg-gray-50 py-8">
-//       <div className="max-w-6xl mx-auto px-4">
-//         {/* Navigation Tabs */}
-//         <div className="mb-8">
-//           <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg max-w-md mx-auto">
-//             <a
-//               href="#privacy"
-//               onClick={() => setActivePage('privacy')}
-//               className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors text-center ${
-//                 activePage === 'privacy'
-//                   ? 'bg-white text-gray-900 shadow-sm'
-//                   : 'text-gray-500 hover:text-gray-700'
-//               }`}
-//             >
-//               Privacy Policy
-//             </a>
-//             <a
-//               href="#terms"
-//               onClick={() => setActivePage('terms')}
-//               className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors text-center ${
-//                 activePage === 'terms'
-//                   ? 'bg-white text-gray-900 shadow-sm'
-//                   : 'text-gray-500 hover:text-gray-700'
-//               }`}
-//             >
-//               Terms of Service
-//             </a>
-//           </div>
-//         </div>
-
-//         {/* Page Content */}
-//         {activePage === 'privacy' ? <PrivacyPolicy /> : <TermsOfService />}
-//       </div>
-//     </div>
-//   );
-// };
 
 export default PrivacyPolicy;
