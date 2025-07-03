@@ -26,6 +26,34 @@ interface SocialIconProps {
 }
 
 const MeetTheFounders: React.FC = () => {
+    const founders: Founder[] = [
+    {
+      id: 1,
+      name: "Abhiram",
+      title: "Co-Founder & CEO",
+      image: "/profile_img.png", // Put image in public/images/founders/
+     bio: "𝗛𝗲𝘆 𝘁𝗵𝗲𝗿𝗲! 👋 I'm Abhiram a passionate tech explorer who loves building on the web with 𝗛𝗧𝗠𝗟, 𝗖𝗦𝗦, 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁, 𝗥𝗲𝗮𝗰𝘁, 𝗡𝗲𝘅𝘁𝗝𝗦, 𝗡𝗼𝗱𝗲𝗝𝗦, 𝗘𝘅𝗽𝗿𝗲𝘀𝘀𝗝𝗦 & 𝗠𝗼𝗻𝗴𝗼𝗗𝗕. I'm also diving deep into the world of 𝗔𝗜 𝗔𝗴𝗲𝗻𝘁𝘀 and 𝗟𝗮𝗿𝗴𝗲 𝗟𝗮𝗻𝗴𝘂𝗮𝗴𝗲 𝗠𝗼𝗱𝗲𝗹𝘀 (𝗟𝗟𝗠𝘀) to build intelligent, interactive experiences I thrive on challenges, love turning ideas into impact, and enjoy connecting with our ever-growing 𝗱𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 to learn, share, and grow together!",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/chikatla-abhiram/",
+        twitter: "https://x.com/ChikatlaAbhiram",
+         github: "https://github.com/AbhiramChikatla",
+        email: "abhiramchikatla03@gmail.com"
+      }
+    },
+    {
+      id: 2,
+      name: "Abhiram",
+      title: "Co-Founder & CTO",
+      image: "//profile_img.png", // Put image in public/images/founders/
+      bio: "𝗛𝗲𝘆 𝘁𝗵𝗲𝗿𝗲! 👋 I'm Abhiram, a tech enthusiast who loves playing with web technologies like 𝗛𝗧𝗠𝗟, 𝗖𝗦𝗦, 𝗥𝗲𝗮𝗰𝘁, 𝗡𝗼𝗱𝗲𝗝𝗦, 𝗘𝘅𝗽𝗿𝗲𝘀𝘀𝗝𝗦, 𝗠𝗼𝗻𝗴𝗼𝗗𝗕, and 𝗡𝗲𝘅𝘁𝗝𝗦 to create amazing things. Every challenge is an exciting opportunity for me, and I absolutely enjoy bringing creative ideas to life. When I'm not coding cool solutions, you'll find me sharing knowledge and 𝗰𝗼𝗻𝗻𝗲𝗰𝘁𝗶𝗻𝗴 with our awesome 𝗱𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆!",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/chikatla-abhiram/",
+        twitter: "https://x.com/ChikatlaAbhiram",
+         github: "https://github.com/AbhiramChikatla",
+        email: "abhiramchikatla03@gmail.com"
+      }
+    }
+  ];
   const SocialIcon: React.FC<SocialIconProps> = ({ platform, url }) => {
     const iconMap: Record<keyof SocialLinks, React.ComponentType> = {
       linkedin: FaLinkedin,
