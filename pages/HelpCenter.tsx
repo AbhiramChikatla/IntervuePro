@@ -167,6 +167,212 @@ const HelpCenterPage = () => (
                                     </div>
                                 </div>
                             </section>
+                            <section>
+                                <h2 className="text-xl font-semibold mb-4 text-gray-800">
+                                    🧠 Interview Feedback
+                                </h2>
+                                <div className="space-y-6 text-gray-700">
+                                    <div>
+                                        <h3 className="text-lg font-medium mb-3 text-gray-800">
+                                            Where can I view my feedback?
+                                        </h3>
+                                        <ul className="list-disc pl-6 space-y-2">
+                                            <li>
+                                                Go to your{" "}
+                                                <strong>Profile</strong> by
+                                                clicking the icon at the top
+                                                right
+                                            </li>
+                                            <li>
+                                                View your list of completed
+                                                interviews
+                                            </li>
+                                            <li>
+                                                Click on any interview to view
+                                                the detailed feedback
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section>
+                                <h2 className="text-xl font-semibold mb-4 text-gray-800">
+                                    👤 Profile & Settings
+                                </h2>
+                                <div className="space-y-6 text-gray-700">
+                                    <div>
+                                        <h3 className="text-lg font-medium mb-3 text-gray-800">
+                                            How do I update my profile?
+                                        </h3>
+                                        <ul className="list-disc pl-6 space-y-2">
+                                            <li>Click on your profile icon</li>
+                                            <li>
+                                                Basic Information: Name, profile
+                                                image, detailed bio (up to 500
+                                                characters)
+                                            </li>
+                                            <li>
+                                                Location & Pronouns: Choose your
+                                                city and preferred pronouns
+                                            </li>
+                                            <li>
+                                                Links: Personal website and
+                                                calendar booking link
+                                            </li>
+                                            <li>
+                                                Skills and Tags: Add up to 10
+                                                relevant skills, tools, or roles
+                                                (e.g. ReactJS, Fullstack
+                                                Developer)
+                                            </li>
+                                            <li>
+                                                Suggested Skills: Easily add
+                                                popular skills from our
+                                                recommendation list
+                                            </li>
+                                            <li>
+                                                Social Media Links: Add Twitter,
+                                                LinkedIn, Instagram, and GitHub
+                                                handles
+                                            </li>
+                                            <li>
+                                                Make sure to Save Profile after
+                                                making updates!
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section>
+                                <h2 className="text-xl font-semibold mb-4 text-gray-800">
+                                    🏢 Enterprise Support(Comming Soon)
+                                </h2>
+                                <div className="space-y-6 text-gray-700">
+                                    <div>
+                                        <h3 className="text-lg font-medium mb-3 text-gray-800">
+                                            I'm an organization. How do I post a
+                                            job?
+                                        </h3>
+                                        <ul className="list-disc pl-6 space-y-2">
+                                            <li>
+                                                Subscribe to the{" "}
+                                                <strong>Enterprise Plan</strong>
+                                            </li>
+                                            <li>
+                                                Use the dashboard to post jobs
+                                                and view applications
+                                            </li>
+                                            <li>
+                                                Approve profiles of candidates
+                                                that match your requirements
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h3 className="text-lg font-medium mb-3 text-gray-800">
+                                            How much does it cost?
+                                        </h3>
+                                        <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
+                                            <p>
+                                                <strong>
+                                                    Enterprise Job Posting
+                                                    Package:
+                                                </strong>{" "}
+                                                $99 for 50 interviews
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section>
+                                <h2 className="text-xl font-semibold mb-4 text-gray-800">
+                                    🛠 Troubleshooting
+                                </h2>
+                                <div className="space-y-6 text-gray-700">
+                                    <div>
+                                        <h3 className="text-lg font-medium mb-3 text-gray-800">
+                                            I'm not receiving the confirmation
+                                            email
+                                        </h3>
+                                        <ul className="list-disc pl-6 space-y-2">
+                                            <li>
+                                                Check your spam or promotions
+                                                folder
+                                            </li>
+                                            <li>
+                                                If it's still missing, contact
+                                                us at{" "}
+                                                <strong>
+                                                    suprabhat.work@gmail.com
+                                                </strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h3 className="text-lg font-medium mb-3 text-gray-800">
+                                            My interview didn't start properly
+                                        </h3>
+                                        <ul className="list-disc pl-6 space-y-2">
+                                            <li>
+                                                Refresh the page or clear your
+                                                browser cache
+                                            </li>
+                                            <li>
+                                                Ensure you have a stable
+                                                internet connection
+                                            </li>
+                                            <li>
+                                                Contact support if the issue
+                                                persists
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h3 className="text-lg font-medium mb-3 text-gray-800">
+                                            Interview feedback is not loading
+                                        </h3>
+                                        <ul className="list-disc pl-6 space-y-2">
+                                            <li>
+                                                Wait a few minutes after
+                                                completing the interview for
+                                                feedback to process
+                                            </li>
+                                            <li>Refresh your profile page</li>
+                                            <li>
+                                                If the issue continues, reach
+                                                out to our support team
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h3 className="text-lg font-medium mb-3 text-gray-800">
+                                            Audio/Video issues during interview
+                                        </h3>
+                                        <ul className="list-disc pl-6 space-y-2">
+                                            <li>
+                                                Check your microphone and camera
+                                                permissions in browser settings
+                                            </li>
+                                            <li>
+                                                Ensure you're using a supported
+                                                browser (Chrome, Firefox,
+                                                Safari)
+                                            </li>
+                                            <li>
+                                                Test your audio/video before
+                                                starting the interview
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                     </div>
                 </CardContent>
