@@ -41,6 +41,27 @@ const JobDetails = () => {
       </div>
     );
   }
+    const handleStartInterview = () => {
+    const user = auth.currentUser;
+    if (!user || !user.emailVerified) {
+      router.push("/login");
+    } else {
+      setShowKeyPrompt(true);
+      setSecretKey("");
+    }
+  };
+
+  const handleKeySubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log(secretKey);
+    if (secretKey === process.env.NEXT_PUBLIC_SECRET_KEY) {
+      setShowKeyPrompt(false);
+      router.push(`/interview/${job.id}`);
+    } else {
+      toast.error("Invalid secret key.");
+    }
+  };
+
   return (
     <div>
       sample job details page
