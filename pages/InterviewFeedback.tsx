@@ -96,7 +96,28 @@ const InterviewFeedback = ({ id }: { id: string }) => {
           </div>
         </div>
 
-        
+        <InterviewSummary
+          summary={feedback.interview_summary}
+          getScoreValue={getScoreValue}
+          scoreColor={scoreColor}
+        />
+
+        <ScorecardSection
+          scorecard={feedback.scorecard}
+          getScoreValue={getScoreValue}
+          scoreColor={scoreColor}
+        />
+
+        <QuestionFeedbackAccordion
+          questions={feedback.per_question_feedback}
+          scoreColor={scoreColor}
+        />
+
+        <FinalRecommendations
+          recommendations={feedback.final_recommendations}
+        />
+
+        <FeedbackActions createdAt={createdAt} id={String(id)} />
       </div>
     </div>
   );
