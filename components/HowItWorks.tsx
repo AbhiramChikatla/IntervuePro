@@ -1,10 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Play } from "lucide-react";
 
 const HowItWorks = () => {
   return (
-    <div>
-      Sample HowIt works component 
-    </div>
+    <section id="how-it-works" className="pb-16 bg-white">
+        <div>
+            content of how it works goes here
+        </div>
+    </section>
   )
 }
 
