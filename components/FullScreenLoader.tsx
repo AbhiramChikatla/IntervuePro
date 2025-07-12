@@ -229,20 +229,7 @@ const FullScreenLoader: React.FC<FullScreenLoaderProps> = ({
             />
           </div>
 
-          {/* <div className="flex space-x-2">
-            <div
-              className="w-2 h-2 rounded-full animate-pulse"
-              style={{ backgroundColor: primaryColor, animationDelay: "0s" }}
-            />
-            <div
-              className="w-2 h-2 rounded-full animate-pulse"
-              style={{ backgroundColor: primaryColor, animationDelay: "0.2s" }}
-            />
-            <div
-              className="w-2 h-2 rounded-full animate-pulse"
-              style={{ backgroundColor: primaryColor, animationDelay: "0.4s" }}
-            />
-          </div> */}
+        
         </div>
       </div>
     </>
