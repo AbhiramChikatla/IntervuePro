@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
               className="flex items-center gap-2"
             >
               <div className="w-8 h-8 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-lg flex items-center justify-center text-white font-extrabold ">
-                <span className="inline-block">H</span>
+                <span className="inline-block">I</span>
               </div>
               <span className="text-lg font-bold">IntervuePro</span>
             </Link>

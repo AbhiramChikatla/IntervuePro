@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           <div className="col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center text-white font-bold shadow-md">
-                H
+                I
               </div>
               <span className="text-xl font-bold text-slate-900 tracking-tight">
                 IntervuePro
