@@ -1,0 +1,102 @@
+import type { Metadata } from "next";
+import { Outfit, Space_Grotesk } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+import { Toaster } from "sonner";
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+});
+
+export const metadata: Metadata = {
+  title: "IntervuePro – Ace Your Next Interview with AI-Powered Mock Practice",
+  description:
+    "IntervuePro helps job seekers land their dream roles with personalized AI-driven mock interviews, real-time feedback, and a curated question bank tailored to your job role and industry.",
+  keywords: [
+    "AI mock interview",
+    "job interview practice",
+    "interview preparation",
+    "interview feedback",
+    "tech interview platform",
+    "IntervuePro",
+    "mock interview tool",
+    "interview training",
+    "career preparation",
+    "job seekers tool",
+  ],
+  openGraph: {
+    title: "IntervuePro – Ace Your Next Interview with AI",
+    description:
+      "Get ready for your dream job with IntervuePro. Practice interviews with AI, receive instant feedback, and sharpen your communication skills with curated questions.",
+    url: "https://intervuepro.site",
+    siteName: "IntervuePro",
+    images: [
+      {
+        url: "/hero.png",
+        width: 1200,
+        height: 630,
+        alt: "IntervuePro – AI-Powered Interview Practice",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IntervuePro – AI-Powered Mock Interviews for Job Seekers",
+    description:
+      "Practice mock interviews, get AI feedback, and gain confidence before your real job interview – all on one smart platform.",
+    images: ["/hero.png"],
+  },
+  metadataBase: new URL("https://intervuepro.site"),
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      suppressHydrationWarning
+      lang="en"
+      className={`${outfit.className} ${spaceGrotesk.variable}`}
+    >
+      <head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="b0cccf2a-a2e9-4ed1-94ba-a80f4e444861"
+        ></script>
+      </head>
+      <body suppressHydrationWarning className={`antialiased`}>
+        <Navbar />
+        <div>{children}</div>
+
+        <Toaster richColors closeButton position="top-center" />
+      </body>
+    </html>
+  );
+}
