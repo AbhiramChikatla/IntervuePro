@@ -1,4 +1,4 @@
-# IntervuePro Frontend
+# IntervuePro 
 
 IntervuePro is an AI-powered interview practice platform built with Next.js. It helps users practice role-specific interviews, run live AI voice sessions, and receive structured performance feedback with actionable recommendations.
 
